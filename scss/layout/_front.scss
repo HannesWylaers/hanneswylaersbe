@@ -1,0 +1,150 @@
+//
+// General front styling
+//
+
+
+//Sets the containers to the page
+.main-nav,
+.l-navigation {
+	@include container;
+}
+
+.teaser-front,
+.home-bottom,
+footer {
+	@include container;
+} 
+
+
+//Upper part of the front page
+.home-teaser {
+	.teaser-front {
+		padding-top: 25px;
+
+		&__title {
+			padding: 1rem;
+
+			h1,
+			h2, 
+			h3{
+				color: yellow;
+				text-align: center;
+			}
+
+			h1{
+				padding: 10px 0;
+			}
+
+			h2 {
+				font-family: $secondary-font;
+			}
+
+			clear: both;
+
+		}
+
+		&__content {
+			margin: 0 auto;
+
+			p {
+				color: white;
+				text-align: center;
+				font-weight: 500;
+			}
+
+			i {
+				color: white;
+			}
+		}
+
+
+		.social {
+			.fa-inverse {
+				color: $blue-middle;
+			}
+		}
+
+		&__btn {
+			clear: both;
+			span {
+				text-align: center;
+				display: block;
+				margin-top: 2rem;
+
+				a {
+					max-width: 25%;
+					text-transform: uppercase;
+					font-weight: 700;
+					color: $yellow;
+					padding: 0.75rem;
+					border-radius: 5px;
+					border: 2px solid yellow;
+					transition: all 0.25s ease-in;
+
+					&:hover {
+						background-color: $yellow;
+						color: $blue-dark;
+					}
+
+					&:after {
+						content: '\f105';
+						font-family: 'fontAwesome';
+						margin-left: 10px;
+						font-weight: 700;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width:$small-tab) {
+	.teaser-front,
+	.home-bottom,
+	footer {
+		@include container;
+		clear: both;
+	}
+
+	.home-teaser {
+		.teaser-front{
+			&__title {
+				padding: 2rem 0 1rem 0;
+
+				h1,
+				h2, 
+				h3 {
+					text-align: left;
+				}
+
+				h1 {
+					font-size: 5.5rem;
+					margin-bottom: 2rem;
+				}
+				h2 {
+					font-size: 2.5rem;
+					margin-bottom: 1.5rem;
+				}
+				h3 {
+					font-size: 2rem;
+					letter-spacing: 2px;
+				}
+			} 
+
+			&__content {
+				margin: 0;
+				width: 60%;
+
+				p{
+					text-align: left;
+				}
+			}
+
+			&__btn {
+				span {
+					text-align: left;	
+				}	
+			}
+		}
+	}
+}

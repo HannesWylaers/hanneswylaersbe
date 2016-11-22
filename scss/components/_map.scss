@@ -1,0 +1,28 @@
+//
+// Styling for the Google map
+//
+
+#map {
+		height: 400px;
+    width: 400px;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: $small-tab) {
+	#map {
+		float: left;
+		height: 100%;
+		width: 62%;
+		right: 0;
+		position: absolute;
+		top: 0px;
+		z-index: -100;
+		margin-bottom: 0rem;
+	}
+}
+
+.l-saved {
+	#map {
+		display: none;
+	}
+}

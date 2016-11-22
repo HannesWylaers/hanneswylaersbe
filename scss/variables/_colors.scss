@@ -1,0 +1,25 @@
+// BASICS
+$white:           #fff;
+$grey-ultra:      #eee;
+$grey-light:      #ddd;
+$grey:            #999;
+$grey-dark:       #111;
+$black:           #000;
+
+// CORPORATE COLORS
+$color:           #000;
+$secondary:       #ffea00;
+$blue-dark:       #000228;
+$blue-middle:			#23888d;
+$green:      	  	#44908c;
+$yellow:      	  #fff200;
+
+// VARIATIONS
+// COLOR TYPES
+$background:                  $white;
+$base-text-color:             $blue-dark;
+$base-link-color:             $color;
+// $base-link-hover-color:       $highlight;
+$base-selected-text-color:    $white;
+$base-selected-text-background-color: $base-text-color;
+$invert-color:                invert($color);

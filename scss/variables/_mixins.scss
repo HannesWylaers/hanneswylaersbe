@@ -1,0 +1,85 @@
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin transform($args...) {
+  -webkit-transform: $args;
+  -moz-transform: $args;
+  -ms-transform: $args;
+  -o-transform: $args;
+  transform: $args;
+}
+
+//mixin when selecting the text
+@mixin selection($current-selector: false) {
+  @if $current-selector {
+    &::-moz-selection {
+      @content;
+    }
+
+    &::selection {
+      @content;
+    }
+  } @else {
+    ::-moz-selection {
+      @content;
+    }
+
+    ::selection {
+      @content;
+    }
+  }
+}
+
+//btn
+@mixin button($color) {
+  background-color: $color;
+  border: 1px solid mix($blue-dark, $color, 25%);
+  border-radius: 5px;
+  padding: .25em .5em;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+
+  &:hover {
+    cursor: pointer;
+    background-color: mix($blue-dark, $color, 15%);
+    border-color: mix($blue-dark, $color, 40%);
+  }
+
+  @media (max-width: $small-tab){
+    display: block;
+  }
+}
+
+
+@mixin buttonSaved($color) {
+  background-color: $color;
+  border: 1px solid mix($blue-dark, $color, 25%);
+  border-radius: 5px;
+  line-height: 2.2rem;
+  display: block;
+  color: white;
+  text-align: center;
+  display: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: mix($blue-dark, $color, 15%);
+    border-color: mix($blue-dark, $color, 40%);
+  }
+
+  &:after {
+    content:'\f105';
+    font-family: 'fontAwesome';
+    margin-left: 10px;
+  }
+
+  @media (max-width: $small-tab){
+    display: block;
+  }
+}

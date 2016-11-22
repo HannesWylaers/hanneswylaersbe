@@ -1,0 +1,100 @@
+
+// Person styling on the front page
+//
+.persons {
+	margin: 0 auto;
+
+	.person {
+		color: white;
+		padding: 0 2rem 2rem 0;
+		text-align: center;
+
+		&__body-name {
+			text-transform: uppercase;
+			font-weight: 700;
+			color: $green;
+			
+		}
+
+		&__image {
+			margin-bottom: 1rem;
+
+			img {
+				max-width: 35%;
+				margin: 0 auto;
+				display: block;
+				border: 0px solid white;
+				transition: all .2s ease-in-out;
+				&:hover {
+					transform: scale(1.1);
+					}
+				}
+			}
+			
+		.person__btn {
+			.click {
+				a {
+					cursor: pointer;
+					color: $green;
+					font-style: italic;
+					font-size: 0,75rem;
+					font-weight: 300;
+					transition: all 400ms ease-out;
+
+					&:after {
+						content:' \f054';
+						font-family: 'fontAwesome';
+						margin-left: 5px;
+						color: $blue-dark;
+					}
+
+					&:hover {
+						color:$yellow;
+
+						&:after {
+							content: '\f054';
+							font-family: 'fontAwesome';
+							margin-left: 5px;
+							color: $yellow;
+						}
+					}
+				}
+			}
+
+			.clicked {
+				display: none;
+				padding: 0 2rem;
+			}
+		}
+	}
+}
+
+
+
+@media (min-width:$small-tab) {
+	.persons {
+		text-align: center;
+		width: 90%;
+		position: relative;
+
+		.person {
+			width: 30%;
+			float: left;
+			margin: 0px 1.5rem;
+
+			.person__image {
+			img {
+				max-width: 45%;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width:$tab) {
+	.persons {
+		.person {
+			width: 24%;
+		}
+	}
+}

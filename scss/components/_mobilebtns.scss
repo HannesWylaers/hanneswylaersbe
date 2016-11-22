@@ -1,0 +1,46 @@
+//
+// Styling open close button
+//
+
+.button {
+    font-size: 2rem;
+    display: inline;
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+    z-index: 999;
+
+    a {
+      text-decoration: none;
+    }
+}
+
+.btn-open {
+  &:after {
+    color: white;
+    content: "\f0c9";
+    font-family: "FontAwesome";
+    @include transition(all .2s linear 0s)
+  }
+
+  &:hover {
+    &:after {
+      color: $yellow;
+    }
+  }
+} 
+
+.btn-close {
+  &:after {
+    color: #fff;
+    content: "\f00d";
+    font-family: "fontAwesome";
+    @include transition(all .2s linear 0s)
+  }
+
+  &:hover {
+    &:after {
+      color: $yellow;
+    } 
+  }
+}

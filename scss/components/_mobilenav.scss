@@ -1,0 +1,74 @@
+//
+// Overlay triggerd by jQuery
+//
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 0.88;
+  z-index: 99;
+}
+
+
+//the mobile menu
+.wrap {
+  position: relative;
+  margin: 0 auto;
+  top: 8rem;
+
+  .wrap-nav {
+    text-transform: capitalize;
+    text-align: center;
+    width: 100%;
+
+    a {
+    line-height: 5rem;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: white;
+    display: block;
+
+    @include transition(all .2s linear 0s);
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+}
+
+
+//mediaquerries
+@media (min-width: 48em) {
+  .btn-open {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .wrap {
+    ul {
+      &.wrap-nav {
+        padding: 2rem 0 0;
+        &>li {
+          width: 100%;
+          padding: 1.5rem 0;
+        }
+      }
+    }
+  }
+
+  nav {
+    ul {
+      opacity: 0;
+      visibility: hidden;
+    }
+  } 
+}
+
+
+
+

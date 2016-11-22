@@ -1,0 +1,25 @@
+//
+// Styling for the horizontal line
+//
+
+.teaser-front {
+	&__line {
+		.line {
+			max-width: 10%;
+		}
+	}
+}
+
+@media(min-width: $small-tab){
+	.teaser-front {
+		.line {
+			margin: 1rem 0;
+	    clear: both;	
+	    width: 10%;	
+		}
+
+		&__content {
+			clear: both;
+		}
+	}	
+}

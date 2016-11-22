@@ -1,0 +1,13 @@
+//
+// Scroll to top styling in the footer
+//
+
+.scrollTop {
+  font-size: 1.3rem;
+
+  &:after {
+    color: $green;
+    content: "\f0aa";
+    font-family: "FontAwesome";
+  }
+}

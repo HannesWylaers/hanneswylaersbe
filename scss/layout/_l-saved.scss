@@ -1,0 +1,99 @@
+//
+// Saved page styling
+//
+
+.l-saved {
+	@include container;
+	h1 {
+		color: white;
+		clear: both;
+		padding: 2rem 0;
+		color: $yellow;
+		line-height: 3rem;
+		text-align: center;
+	}
+
+	h3{
+		color: $yellow;
+		text-align:center;
+	}
+
+
+	//hide all canvasses except the first
+	.date1,
+	.date2,
+	.date3{
+		canvas{
+			display: none;
+		}
+	}
+
+	.btn-add,
+	.btn-clear {
+		@include button($yellow);
+		width: 94%;
+		display: block;
+		overflow: auto;
+		text-align: center;
+		font-weight: 500;
+		margin: 0 2rem 0.5rem 0;
+		float: left;
+		transition: all 0.5s ease;
+
+		&:hover {
+				&:after {
+				content: '\f105';
+				font-family: 'fontAwesome';
+				margin-left: 10px;
+			}
+		}
+	}
+
+	#saved{
+		clear: both;
+		padding-top: 4rem;
+		#log{
+			border-bottom: 1px solid white;
+			padding: 2rem;
+		}
+	}
+}
+
+@media (min-width: $small-tab){
+	.l-saved {
+		.btn-add,
+		.btn-clear {
+			width: 46.5%;
+		}
+
+		.btn-clear {
+			margin: 0 1.5rem 1rem 0;
+			
+		}
+
+		.btn-add {
+			margin: 0;
+		}
+	}
+
+	#saved {
+		h3 {
+			text-align: center;
+			font-size: 2rem;
+			margin-bottom: 2rem;
+		}
+
+		.dates {
+			margin-bottom: 1rem;
+			.date {
+				width: 24%;
+				float: left;
+			}
+		}
+
+		#log {
+			// padding-bottom: 2rem;
+		}
+	}
+}
+

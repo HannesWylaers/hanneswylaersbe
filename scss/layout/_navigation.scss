@@ -1,0 +1,31 @@
+//
+// Main navigation styling
+//
+
+.main-nav {
+	nav {
+		padding-top: 25px;
+		float: right;
+    display: block;
+    width: 75%;
+
+    a {
+    	text-transform: uppercase;
+    }
+
+    .button {
+    	padding-top: 25px;
+    }
+	}
+
+	//sun icon
+	.main-logo {
+    float: left;
+    padding-top: 30px;
+    width: 50px;
+    
+    img {
+        width: 40px;
+    }
+	}
+}

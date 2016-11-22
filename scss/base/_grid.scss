@@ -1,0 +1,32 @@
+// //
+// // LAYOUT CONFIGURATION
+// // ---------------------------------------------------------------------
+// // This file contains layout and grid settings.
+// //
+
+// // GRID SETTINGS
+$gutter:                  1rem;
+$grid-padding:            1rem;
+
+// // MOBILE BREAKPOINT
+$small:    		        		20em;   // 320px
+$small-tab:             	30em;   // 480px
+$tab:              				48em;   // 768px
+$tab-desk:            		60em;   // 960px
+$desk-wide:             	90em;   // 1440px
+$wide:             				110em;  // 1440px
+
+
+// Default container
+@mixin container {
+  width: 85%;
+  margin: 0 auto;
+  max-width: 70em;
+}
+
+// Forecast container
+@mixin container2 {
+  width: 95%;
+  margin: 0 auto;
+  max-width: 70em;
+}

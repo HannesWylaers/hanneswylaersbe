@@ -1,0 +1,84 @@
+//
+// General footer styling
+//
+
+footer {
+	border-top: 1px solid $green;
+	color: white;
+	padding: 1rem 0 1rem 0;
+	display: block;
+	text-align: center;
+	overflow: auto;
+
+	.social {
+		width: 180px;
+		margin: 0 auto;
+
+		p {
+			font-weight: 700;
+			color: $yellow;
+		}
+
+		a {
+			color: $yellow;
+			margin-right: 5px;
+		}
+
+		.fa-lg {
+			font-size: 0.85em;
+		}
+
+		.fa-inverse {
+			color: $blue-dark;
+		}
+	}
+}
+
+
+@media (min-width: $small-tab){
+	.footer {
+		&__left {
+			float: left;
+			display: block;
+		}
+
+		.social {
+			float: right;
+			width: 297px;
+
+			&__title,
+			&__icons {
+				float: left;
+				display: block;
+			}
+
+			&__title {
+				margin-right: .5rem;
+				display: block;
+			}
+
+			&__icons {
+				line-height: 0.5rem;
+				display: inline;
+			}
+		}
+	}
+	
+	.forecast {
+		footer {
+			width: 32%;
+			float: left;
+			margin-left: 30px;
+
+			&__left {
+				float: none;
+			}	
+
+		.social {
+				float: left;
+				width: 300px;
+				width: 100%;
+			}
+		}
+	}
+}

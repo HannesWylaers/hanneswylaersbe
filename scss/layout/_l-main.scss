@@ -1,0 +1,57 @@
+//
+// Main styling
+//
+
+.home-teaser {	
+	background: url(../images/home-background-3202.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 700px;
+}
+
+.home-bottom {
+	overflow: auto;
+	padding-bottom: 2rem;
+
+	h3 {
+		text-align: center;
+		color: $yellow;
+		font-size: 2rem;
+		margin-bottom: 4rem;
+		font-weight: 700;
+	}
+
+	p {
+		color: white;
+	}
+}
+
+//querries
+@media (min-width: $small-tab) {
+	.home-teaser {
+		background: url(../images/home-background_768.jpg);
+		min-height: 850px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.home-bottom {
+		h3 {
+			font-size: 2.5rem;
+	    line-height: 3rem;
+			margin-bottom: 5rem;
+		}
+	}
+}
+
+@media (min-width: $tab) {
+	.home-teaser {
+		background: url(../images/home-background.jpg);
+		background-position: center center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+		min-height: 800px;
+	}
+}

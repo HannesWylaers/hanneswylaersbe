@@ -1,0 +1,31 @@
+//
+// General navigation styling: home icon
+//
+
+.main-logo {
+	a {
+		display: block;
+   height: 45px;
+   width: 45px;
+   background: url(../images/home-icon-hover.svg) no-repeat;
+   text-indent: -9999px;
+   overflow: hidden;
+	}
+}
+
+@media (min-width:$small-tab) {
+	.forecast {
+		.main-logo {
+		a {
+	    display: block;
+	    height: 50px;
+	    width: 50px;
+	    background: url(../images/home-icon-hover.svg) no-repeat;
+	    text-indent: -9999px;
+	    overflow: hidden;
+	    position: absolute;
+	    left: 32px;
+			}
+	  }
+	}
+}

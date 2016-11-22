@@ -1,0 +1,94 @@
+.l-saved {
+	#saved {
+			#log {
+				padding: 3rem 0;
+				//dirty trick, i know, but hey, it works ;)
+				&:not(:first-child) {
+
+					canvas {
+						display: none;
+					}
+				}
+
+			//no border on last element	
+			&:last-child {
+    		border-bottom: 0px;
+			}
+
+			.dates {
+				.date-description,
+				.date-date {
+					p {
+						color: $yellow;
+						font-weight: 700;
+					}
+				}
+
+				.date-description {
+					text-transform: uppercase
+				}
+			}
+
+			//only in first child
+			&:first-child {
+				.date0 {
+					background-color: $blue-middle;
+					overflow: auto;
+					padding-bottom: 2rem;
+
+					.myWeatherChart-content { 
+						margin-top: 3rem;
+
+					}
+				}
+			} 
+		}
+	}
+}
+
+
+@media (min-width: $small-tab) {
+	.l-saved {
+		#log {
+			clear: both;
+			overflow: auto;
+
+			.dates {
+				display: block;
+
+				img {
+					width: 50px;
+					height: auto;
+				}
+			}
+
+			.date1,
+			.date2,
+			.date3 {
+				float: left;
+				display: block;
+				width: 24%;
+				max-width: 30%;
+				margin: 0 2.6rem;
+			}
+
+			&:first-child {
+				.date0 {
+					padding: 3% 15%;
+					margin: 0 auto;
+					margin-bottom: 3rem;
+
+					canvas {
+						float: left;
+						margin-right: 10%;
+					}
+
+					.myWeatherChart-content {
+						float: left;
+					}
+				}
+			} 
+		}
+	}
+}
+
