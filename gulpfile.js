@@ -10,6 +10,8 @@ var gulp = require('gulp'); //for a package named 'gulp'
     cssnano = require('gulp-cssnano');
     uglify = require('gulp-uglify');
     gulpIf = require('gulp-if');
+    sourcemaps = require('gulp-sourcemaps'); //used for minifying the css + show where the css is in the scss files
+    autoprefixer = require('gulp-autoprefixer'); //for autoprefixing the css
 
 
 /* 
@@ -20,6 +22,10 @@ gulp.task('sass', function(){
     
     .src('scss/styles.scss') // Gets all files ending with .scss in app/scss and children dirs
     .pipe(sassGlob())
+    .pipe(autoprefixer({
+      browsers: ['last 2 version', 'Safari >= 5', 'ie 8-9', '> 1%']
+    }))
+    .pipe(sourcemaps.write()) // Writing sourcemaps
     .pipe(sass().on('error', sass.logError))// Converts Sass to CSS with gulp-sass
     .pipe(gulp.dest('css')) //desitnation for the compilled sass files
     .pipe(browserSync.reload({

@@ -1,0 +1,46 @@
+# project directory #
+logs
+data/bcp_*/
+
+# PhpStorm
+.idea
+
+# Dreamweaver # 
+dwsync.xml
+_notes
+http/_compareTemp/
+
+
+# Eclipse #
+.buildpath
+.project
+.settings
+
+# SASS #
+.sass-cache
+
+# Packages #
+*.7z
+*.dmg
+#*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+*.log
+*.sql
+!data/*.sql
+
+# OS generated files #
+.DS_Store
+ehthumbs.db
+Icon
+Thumbs.db
+._*
+
+#ignore node_modules
+node_modules
+

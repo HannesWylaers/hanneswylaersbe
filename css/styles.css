@@ -581,7 +581,7 @@ footer {
     position: absolute;
     top: 0px;
     z-index: -100;
-    margin-bottom: 0rem; } }
+    margin-bottom: 0; } }
 
 .l-saved #map {
   display: none; }
